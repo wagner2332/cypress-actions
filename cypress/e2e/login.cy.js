@@ -17,7 +17,7 @@ describe('Login', () => {
     it('usuário não existe', () => {
         cy.login('teste', 'teste')
         cy.get(toast)
-            .should('have.text', 'Oops! Credenciais inválidas :(')
+            .should('have.text', 'Oops! Senha inválida :(')
     })
 
     it('senha incorreta', () => {
@@ -29,6 +29,6 @@ describe('Login', () => {
     it('com sucesso', () => {
         cy.login('qa', 'xperience')
         cy.get(modalContent)
-            .should('have.text', 'Suas credenciais são válidas :)')
+            .should('have.text', 'Suas credenciais estão válidas :)')
     })
 })
