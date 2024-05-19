@@ -17,7 +17,7 @@ describe('Login', () => {
     it('usuário não existe', () => {
         cy.login('teste', 'teste')
         cy.get(toast)
-            .should('have.text', 'Oops! Credencial inválida :(')
+            .should('have.text', 'Oops! Credenciais inválidas :(')
     })
 
     it('senha incorreta', () => {
